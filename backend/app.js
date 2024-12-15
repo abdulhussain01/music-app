@@ -34,7 +34,7 @@ app.use(
 app.use("/api/v1/user", userRouter);
 
 app.use("/api/v1/playlist", playlistRouter);
-app.use("/api/v1/test", (req, res) => {
+app.get("/api/v1/test", (req, res) => {
   res.status(200).json({
     message: "working",
     success: true,
