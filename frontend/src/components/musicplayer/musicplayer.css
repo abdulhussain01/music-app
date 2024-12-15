@@ -1,0 +1,72 @@
+.vds-audio-layout {
+  /* Layout: https://vidstack.io/docs/player/components/layouts/default-layout#audio-layout */
+  /* Components: https://www.vidstack.io/docs/player/components/layouts/default-layout#components */
+  border-radius: 0;
+  box-shadow: none;
+  border-radius: 6px;
+  animation: none;
+}
+
+.media-player[data-view-type="video"] {
+  aspect-ratio: 16 / 9;
+}
+
+.vds-audio-layout.dark {
+  border: 0px solid black;
+}
+.vds-audio-layout.light {
+  border: 0px solid black;
+}
+
+.vds-title {
+  margin-left: 10px;
+  width: 100%;
+}
+
+/* Default for large devices or desktop */
+.customeWidth {
+  width: 100%; /* Default width */
+  
+}
+
+
+/* For tablets and medium-sized devices (landscape) */
+
+@media (max-width: 766px) {
+  
+  .customeWidth {
+    width: 600px; /* Adjust width for small landscape devices */
+  }
+
+  
+}
+
+/* For small devices like smartphones in landscape */
+@media (max-width: 640px) {
+  
+  .customeWidth {
+    width: 450px; /* Adjust width for small landscape devices */
+  }
+
+  
+}
+@media (max-width: 480px) {
+  .customeWidth {
+    width: 370px; /* Adjust width for small landscape devices */
+  }
+  .vds-seek-button {
+    display: none;
+  }
+}
+
+/* For small devices like smartphones in portrait */
+@media (max-width: 380px) {
+  .customeWidth {
+    width: 290px; /* Adjust width for small portrait devices */
+  }
+  
+}
+
+
+
+

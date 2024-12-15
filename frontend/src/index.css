@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root .dark {
+  --common-black: #fcfcfc;
+  --common-black-two: #d5d4d5;
+  --common-background: #151515;
+  --common-backgroundtwo: #212121;
+  --common-secondarybackdround: 37 37 37;
+  --common-white: #151515;
+  --common-white-two: #0b0505;
+  --theme-primary: #007aff;
+  --theme-secondary: #48b489;
+}
+
+:root .light {
+  --common-black: #151515;
+  --common-black-two: #0b0505;
+  --common-background: #f2f2f2;
+  --common-backgroundtwo: #e1e1e1;
+  --common-secondarybackdround: 224 222 222 ;
+  --common-white: #fcfcfc;
+  --common-white-two: #d5d4d5;
+  --theme-primary: #007aff;
+  --theme-secondary: #48b489;
+}
+
+.noscroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+.animate-slow{
+  overflow: hidden;
+  animation: spinslow infinite 10s linear;
+
+  
+}
+ 
+@keyframes spinslow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
