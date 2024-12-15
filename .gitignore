@@ -55,7 +55,7 @@ thumb
 sketch
 
 
-backend/config
+.env
 dist
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs,react

@@ -10,7 +10,7 @@ import cors from "cors";
 import path from "path";
 
 const app = express();
-dotenv.config({ path: "./config/config.env" });
+dotenv.config();
 
 const __dirname = path.resolve();
 
@@ -34,12 +34,18 @@ app.use(
 app.use("/api/v1/user", userRouter);
 
 app.use("/api/v1/playlist", playlistRouter);
+app.use("/api/v1/test", (req, res) => {
+  res.status(200).json({
+    message: "working",
+    success: true,
+  });
+});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname,"../frontend","dist","index.html"))
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
 
