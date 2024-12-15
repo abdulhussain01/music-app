@@ -34,12 +34,10 @@ app.use(
 app.use("/api/v1/user", userRouter);
 
 app.use("/api/v1/playlist", playlistRouter);
-app.get("/api/v1/test", (req, res) => {
-  res.status(200).json({
-    message: "working",
-    success: true,
-  });
-});
+app.get("/api/v1/test",(req,res)=>{
+  res.send("working test backend is working ")
+} );
+
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
